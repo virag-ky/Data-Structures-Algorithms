@@ -1,4 +1,4 @@
-# Data-Structures-Algorithms
+# Data-Structures/Algorithms
 
 > I'm using this repository to store my practice challenges/exercises of data-structures and algorithms. 
 
