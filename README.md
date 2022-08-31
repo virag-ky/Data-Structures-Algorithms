@@ -1,6 +1,6 @@
 # Data-Structures/Algorithms
 
-> I'm using this repository to store my practice challenges/exercises of data-structures and algorithms. 
+> This repository is for my practice challenges/exercises of data-structures and algorithms. 
 
 ## Languages:
 * JavaScript
