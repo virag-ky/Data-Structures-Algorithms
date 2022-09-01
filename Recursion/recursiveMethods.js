@@ -135,5 +135,26 @@ const contains = (obj, val) => {
   }
 };
 
-console.log(contains(nestedObject, 44)); // true
-console.log(contains(nestedObject, 'foo')); // false
+//console.log(contains(nestedObject, 44)); // true
+//console.log(contains(nestedObject, 'foo')); // false
+
+function realSize(arrays) {
+  const arr = [];
+  recursion(0, arrays, arr);
+  return arr.length;
+}
+
+function recursion(index, inputArray, outputArray) {
+  if (index >= inputArray.length) {
+    return;
+  }
+
+  if (Array.isArray(inputArray[index])) {
+    recursion(0, inputArray[index], outputArray);
+  } else {
+    outputArray.push(inputArray[index]);
+  }
+  recursion(index + 1, inputArray, outputArray);
+}
+
+console.log(realSize([1, 2, [3, 4], 5, [6, [7, 8]]])); //8
