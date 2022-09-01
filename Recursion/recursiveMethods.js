@@ -17,7 +17,7 @@ const sumAll = (num) => {
   }
 };
 
-console.log(sumAll(4)); // 4 + 3 + 2 + 1 => 10
+//console.log(sumAll(4)); // 4 + 3 + 2 + 1 => 10
 
 const calculateFactorial = (num) => {
   //return (num != 1) ? num * calculateFactorial(num - 1) : 1;
@@ -29,7 +29,7 @@ const calculateFactorial = (num) => {
   }
 };
 
-console.log(calculateFactorial(5)); // 5 * 4 * 3 * 2 * 1 => 120
+//console.log(calculateFactorial(5)); // 5 * 4 * 3 * 2 * 1 => 120
 
 const sumFibonacci = (num) => {
   let a = 1;
@@ -42,7 +42,7 @@ const sumFibonacci = (num) => {
   return b;
 };
 
-console.log(sumFibonacci(7)); // 1,1,2,3,5,8,13 => 13
+//console.log(sumFibonacci(7)); // 1,1,2,3,5,8,13 => 13
 
 const list = {
   value: 1,
@@ -75,7 +75,7 @@ const printList = (list) => {
   }
 };
 
-printList(list); //1,2,3,4
+//printList(list); //1,2,3,4
 
 const printListReversed = (list) => {
   /*While loop*/
@@ -96,4 +96,44 @@ const printListReversed = (list) => {
   console.log(list.value);
 };
 
-printListReversed(list); //4,3,2,1
+//printListReversed(list); //4,3,2,1
+
+const productOfArray = (arr, result = 1) => {
+  if (arr.length === 0) {
+    return result;
+  } else {
+    result *= arr[0];
+    arr.shift();
+    return productOfArray(arr, result);
+  }
+};
+
+//console.log(productOfArray([1, 2, 3])); // 6
+//console.log(productOfArray([1, 2, 3, 10])); // 60
+
+const nestedObject = {
+  data: {
+    info: {
+      stuff: {
+        thing: {
+          moreStuff: {
+            magicNumber: 40,
+          },
+        },
+      },
+    },
+  },
+};
+
+const contains = (obj, val) => {
+  for (let key in obj) {
+    if (obj[key] === val) {
+      return true;
+    } else {
+      return contains(obj[key], val) || false;
+    }
+  }
+};
+
+console.log(contains(nestedObject, 44)); // true
+console.log(contains(nestedObject, 'foo')); // false
