@@ -24,5 +24,5 @@ const contains = (obj, val) => {
   }
 };
 
-console.log(contains(nestedObject, 44)); // true
+console.log(contains(nestedObject, 40)); // true
 console.log(contains(nestedObject, 'foo')); // false
