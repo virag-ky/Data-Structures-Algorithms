@@ -10,9 +10,11 @@ const mergeSort = (arr) => {
 
   //declare a mid-point which is the half of the array length
   let mid = Math.floor(arr.length / 2);
-  //declare the left array by copying the original array from the first index until the mid-point(not included)
+  //declare the left array
+  //by copying the original array from the zero index until the mid-point(not included)
   let leftArray = mergeSort(arr.slice(0, mid));
-  //declare the right array by copying the original array from the mid-point(not included) until the end
+  //declare the right array
+  //by copying the original array from the mid-point(not included) until the end
   let rightArray = mergeSort(arr.slice(mid));
 
   //merge the two arrays (left and right arrays)
@@ -36,7 +38,8 @@ const merge = (arr1, arr2) => {
   }
 
   //return the sorted array with the combined left and right array
-  //and also if there's leftover (there's one element left in one of the arrays and zero elements left in the other array) then just copy the leftover into the sorted array
+  //and also if there's leftover (there are elements left in one of the arrays and zero elements left in the other array)
+  //then just copy the leftover into the sorted array
   return [...sortedArray, ...arr1, ...arr2];
 };
 
