@@ -16,7 +16,7 @@ const palindrome = (str) => {
 };
 
 const arrangeStr = (str) => {
-  return str.replace(/[\W_]g/, '').toLowerCase();
+  return str.replace(/[\W_]/g, '').toLowerCase();
 };
 
 console.log(palindrome('raceCar')); // true
