@@ -33,7 +33,8 @@ const decodeVariations = (digits) => {
     if (digits[i - 2] == '1' || (digits[i - 2] == '2' && digits[i - 1] < '7')) {
       count[i] += count[i - 2];
     }
-    console.log(count);
   }
   return count[n];
 };
+
+console.log(decodeVariations('1262')); // 3
